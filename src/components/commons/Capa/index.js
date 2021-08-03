@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Conteudo = styled.div`
-  background-color: blue;
+  background-color: pink;
 `;
 const Titulo = styled.h1`
   color: white;
