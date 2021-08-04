@@ -10,10 +10,10 @@ const WrapperCabecalho = styled.div`
   justify-content: space-around;
   ${breakpointsMedia({
     xs: css`
-      justify-content: space-between;
+      height: 40px;
     `,
     md: css`
-      justify-content: space-around;
+      height: 67px;
     `,
   })}
 `;
@@ -24,6 +24,18 @@ WrapperCabecalho.LeftSide = styled.div`
 
 WrapperCabecalho.RightSide = styled.div`
   background-color: red;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${breakpointsMedia({
+    xs: css`
+      width: 169px;
+    `,
+    md: css`
+      width: 250px;
+    `,
+  })}
 `;
 
 const Cabecalho = () => (
