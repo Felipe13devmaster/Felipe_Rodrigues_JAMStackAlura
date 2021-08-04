@@ -1,4 +1,5 @@
 import React from 'react';
+import Cabecalho from '../src/components/commons/Cabecalho';
 import Capa from '../src/components/commons/Capa';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <Capa>
         MARY ELIZABETH
       </Capa>
+      <Cabecalho />
     </div>
   );
 }
