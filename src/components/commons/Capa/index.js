@@ -12,6 +12,17 @@ const Conteudo = styled.div`
 `;
 const Titulo = styled.h1`
   color: white;
+  margin-bottom: 0;
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 108px;
+`;
+const Subtitulo = styled.h3`
+  color: white;
+  margin-top: 0;
+  font-size: 48px;
+  font-weight: 300;
+  line-height:  57.6px;
 `;
 
 const Capa = ({ children }) => (
@@ -19,7 +30,7 @@ const Capa = ({ children }) => (
     <Titulo>
       {children}
     </Titulo>
-    <h3>Portifólio</h3>
+    <Subtitulo>Portifólio</Subtitulo>
   </Conteudo>
 );
 
