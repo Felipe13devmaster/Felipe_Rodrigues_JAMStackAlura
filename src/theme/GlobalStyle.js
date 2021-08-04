@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     min-height: 100vh;
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'Fira Sans Condensed', sans-serif; 
   }
 
   #__next {
