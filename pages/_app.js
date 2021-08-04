@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Head from 'next/head';
-import GlobalStyle from './theme/GlobalStyle';
+import GlobalStyle from '../src/theme/GlobalStyle';
 
 function MyApp({ Component, pageProps }) {
   return (

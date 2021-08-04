@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const Conteudo = styled.div`
   background-color: pink;
@@ -13,9 +14,19 @@ const Conteudo = styled.div`
 const Titulo = styled.h1`
   color: white;
   margin-bottom: 0;
-  font-size: 90px;
   font-weight: 400;
-  line-height: 108px;
+
+  ${breakpointsMedia({
+    xs: css`
+      font-size: 64px;
+      line-height: 76.8px;
+      text-align: center;
+    `,
+    md: css`
+      font-size: 90px;
+      line-height: 108px;
+    `,
+  })}
 `;
 const Subtitulo = styled.h3`
   color: white;
