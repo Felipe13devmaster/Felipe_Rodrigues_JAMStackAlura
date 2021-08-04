@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 
 const Conteudo = styled.div`
   background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 `;
 const Titulo = styled.h1`
   color: white;
@@ -14,6 +19,7 @@ const Capa = ({ children }) => (
     <Titulo>
       {children}
     </Titulo>
+    <h3>Portifólio</h3>
   </Conteudo>
 );
 

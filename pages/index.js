@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Capa>
-        Bizinhaaaa
+        MARY ELIZABETH
       </Capa>
     </div>
   );
