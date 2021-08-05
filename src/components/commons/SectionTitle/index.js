@@ -12,10 +12,12 @@ const Titulo = styled.h2`
     xs: css`
       font-size: 36px;
       line-height: 43px;
+      margin: 32px 0;
     `,
     md: css`
       font-size: 60px;
       line-height: 72px;
+      margin: 64px 0 85px;
     `,
   })}
 `;

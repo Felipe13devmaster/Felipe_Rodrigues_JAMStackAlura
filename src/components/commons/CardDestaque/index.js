@@ -1,12 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const ContentCardDestaque = styled.div`
   background-color: pink;
-  width: 900px;
-  height: 320px;
-  margin-top: 21px;
+  
+  ${breakpointsMedia({
+    xs: css`
+      width: 290px;
+      height: 249px;
+    `,
+    md: css`
+      width: 900px;
+      height: 320px;
+    `,
+  })}
 `;
 
 const CardDestaque = ({ children }) => (

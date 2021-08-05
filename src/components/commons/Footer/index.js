@@ -1,9 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const ContentFooter = styled.div`
   background-color: pink;
-  margin-top: 52px;
+  
+  ${breakpointsMedia({
+    xs: css`
+      margin-top: 32px;
+    `,
+    md: css`
+      margin-top: 52px;
+    `,
+  })}
 `;
 
 const Footer = ({ children }) => (
