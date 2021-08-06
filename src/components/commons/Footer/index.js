@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import PropType from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const FooterContent = styled.div`
@@ -33,5 +34,9 @@ const Footer = ({ children }) => (
     </FooterIcon>
   </FooterContent>
 );
+
+Footer.propTypes = {
+  children: PropType.string.isRequired,
+};
 
 export default Footer;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardImage from '../CardImage';
@@ -24,16 +23,16 @@ const ContentCardDestaque = styled.div`
   })}
 `;
 
-const CardDestaque = ({ children }) => (
+const CardDestaque = () => (
   <ContentCardDestaque>
-    <CardImage></CardImage>
-    <CardTitle></CardTitle>
-    <CardText></CardText>
+    <CardImage />
+    <CardTitle />
+    <CardText />
   </ContentCardDestaque>
 );
 
-CardDestaque.propTypes = {
-  children: PropTypes.string.isRequired,
-};
+// CardDestaque.propTypes = {
+//   children: PropTypes.string.isRequired,
+// };
 
 export default CardDestaque;

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
@@ -14,8 +15,8 @@ const Text = styled.p`
   })}
 `;
 
-const CardText = () => {
-  return <Text>CardText lorem</Text>;
-};
+const CardText = () => (
+  <Text>CardText lorem</Text>
+);
 
 export default CardText;

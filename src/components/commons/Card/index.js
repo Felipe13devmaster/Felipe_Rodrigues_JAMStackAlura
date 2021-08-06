@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardImage from '../CardImage';
 import CardTitle from '../CardTitle';
@@ -25,15 +24,15 @@ const ContentCard = styled.div`
   })}
 `;
 
-const Card = ({ children }) => (
+const Card = () => (
   <ContentCard>
-    <CardImage></CardImage>
-    <CardTitle></CardTitle>
+    <CardImage />
+    <CardTitle />
   </ContentCard>
 );
 
-Card.propTypes = {
-  children: PropTypes.string.isRequired,
-};
+// Card.propTypes = {
+//   children: PropTypes.string.isRequired,
+// };
 
 export default Card;
