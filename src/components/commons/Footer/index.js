@@ -2,8 +2,11 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
-const ContentFooter = styled.div`
+const FooterContent = styled.div`
   background-color: pink;
+  display: flex;
+  justify-content: center;
+  height: 68px;
   
   ${breakpointsMedia({
     xs: css`
@@ -15,8 +18,20 @@ const ContentFooter = styled.div`
   })}
 `;
 
+const FooterIcon = styled.div`
+  background-color: red;
+  display: flex;
+  align-Items: center;
+  justify-content: center;
+  width: 224px;
+`;
+
 const Footer = ({ children }) => (
-  <ContentFooter>{children}</ContentFooter>
+  <FooterContent>
+    <FooterIcon>
+      {children}
+    </FooterIcon>
+  </FooterContent>
 );
 
 export default Footer;

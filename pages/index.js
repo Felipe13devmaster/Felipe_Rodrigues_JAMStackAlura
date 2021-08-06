@@ -14,7 +14,7 @@ export default function Home() {
       <Cabecalho />
       <SectionTitle>Meus Projetos</SectionTitle>
       <WrapperProjetos />
-      <Footer>Footer</Footer>
+      <Footer>FooterIcon</Footer>
     </div>
   );
 }

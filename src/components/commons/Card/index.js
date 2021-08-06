@@ -2,9 +2,14 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import CardImage from '../CardImage';
+import CardTitle from '../CardTitle';
 
 const ContentCard = styled.div`
   background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
   ${breakpointsMedia({
     xs: css`
@@ -21,7 +26,10 @@ const ContentCard = styled.div`
 `;
 
 const Card = ({ children }) => (
-  <ContentCard>{children}</ContentCard>
+  <ContentCard>
+    <CardImage></CardImage>
+    <CardTitle></CardTitle>
+  </ContentCard>
 );
 
 Card.propTypes = {

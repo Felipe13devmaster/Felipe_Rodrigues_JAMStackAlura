@@ -8,6 +8,7 @@ const WrapperCabecalho = styled.div`
   background-color: blue;
   display: flex;
   justify-content: space-around;
+
   ${breakpointsMedia({
     xs: css`
       height: 40px;
@@ -20,6 +21,18 @@ const WrapperCabecalho = styled.div`
 
 WrapperCabecalho.LeftSide = styled.div`
   background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-Items: center;
+
+  ${breakpointsMedia({
+    xs: css`
+      width: 83px;
+    `,
+    md: css`
+      width: 136px;
+    `,
+  })}
 `;
 
 WrapperCabecalho.RightSide = styled.div`
@@ -28,6 +41,7 @@ WrapperCabecalho.RightSide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
   ${breakpointsMedia({
     xs: css`
       width: 169px;
