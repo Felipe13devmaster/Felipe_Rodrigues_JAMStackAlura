@@ -37,7 +37,7 @@ WrapperCabecalho.LeftSide = styled.div`
 `;
 
 WrapperCabecalho.RightSide = styled.div`
-  background-color:  ${() => theme.colors.tertiary};
+  background-color:  ${() => theme.colors.primary};
   width: 250px;
   display: flex;
   justify-content: center;

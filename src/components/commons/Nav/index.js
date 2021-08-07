@@ -7,6 +7,7 @@ const Menu = styled.nav`
   list-style: none;
   justify-content: space-between;
   width: 100%;
+
   ${breakpointsMedia({
     xs: css`
       font-size: 18px;
@@ -19,11 +20,16 @@ const Menu = styled.nav`
   })}
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+  color: black;
+`;
+
 const Nav = () => {
   const links = [
     {
       texto: 'Sobre Mim',
-      url: '/sobreMim',
+      url: '/',
     },
     {
       texto: 'Contato',
@@ -36,7 +42,7 @@ const Nav = () => {
       {
         links.map((link) => (
           <li key={link.url}>
-            {link.texto}
+            <Link href={link.url}>{link.texto}</Link>
           </li>
         ))
       }

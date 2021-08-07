@@ -10,6 +10,14 @@ const ContentCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: ${() => theme.colors.tertiary};
+    transition: 300ms;
+    transform: scale(1.05);
+  }
   
   ${breakpointsMedia({
     xs: css`
@@ -26,6 +34,7 @@ const ContentCard = styled.div`
 `;
 
 const CardImage = styled.img`
+  border: 1px solid ${() => theme.colors.tertiary};
  
   ${breakpointsMedia({
     xs: css`

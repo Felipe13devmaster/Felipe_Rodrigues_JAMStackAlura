@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <Box>
       <Capa>
-        MARY ELIZABETH
+        FELIPE RODRIGUES
       </Capa>
       <Cabecalho />
       <SectionTitle>Meus Projetos</SectionTitle>
       <WrapperProjetos />
-      <Footer>FooterIcon</Footer>
+      <Footer />
     </Box>
   );
 }

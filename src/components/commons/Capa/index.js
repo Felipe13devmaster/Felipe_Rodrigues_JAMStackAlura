@@ -12,6 +12,7 @@ const Conteudo = styled.div`
   align-items: center;
   min-height: 100vh;
 `;
+
 const Titulo = styled.h1`
   color: white;
   margin-bottom: 0;
@@ -42,7 +43,7 @@ const Capa = ({ children }) => (
     <Titulo>
       {children}
     </Titulo>
-    <Subtitulo>Portifólio</Subtitulo>
+    <Subtitulo>Portfolio</Subtitulo>
   </Conteudo>
 );
 
