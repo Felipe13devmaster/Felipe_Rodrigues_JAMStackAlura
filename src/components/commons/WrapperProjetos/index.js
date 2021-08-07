@@ -42,21 +42,40 @@ const BoxCardDestaque = styled.div`
   })}
 `;
 
-const WrapperProjetos = () => (
-  <BoxWrapper>
-    <BoxCards>
-      <Card>Card</Card>
-      <Card>Card</Card>
-      <Card>Card</Card>
-    </BoxCards>
-    <BoxCardDestaque>
-      <CardDestaque>CardDestaque</CardDestaque>
-    </BoxCardDestaque>
-  </BoxWrapper>
-);
+const WrapperProjetos = () => {
+  const cards = [
+    {
+      srcImage: 'https://i.pinimg.com/originals/9a/ab/b3/9aabb35835e6230b502ad25532da8ff6.jpg',
+      title: 'Title 1',
+    },
+    {
+      srcImage: 'https://i.pinimg.com/originals/9a/ab/b3/9aabb35835e6230b502ad25532da8ff6.jpg',
+      title: 'Title 2',
+    },
+    {
+      srcImage: 'https://i.pinimg.com/originals/9a/ab/b3/9aabb35835e6230b502ad25532da8ff6.jpg',
+      title: 'Title 3',
+    },
+  ];
 
-// WrapperProjetos.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
+  const cardsDestaque = [
+    {
+      srcImage: 'https://mariaeunicesousa.com/wp-content/uploads/2019/03/ecli-partial-solar-eclipse_20180810_600x320.jpg',
+      title: 'Title',
+      text: 'Text',
+    },
+  ];
+
+  return (
+    <BoxWrapper>
+      <BoxCards>
+        {cards.map((card) => (<Card>{card}</Card>))}
+      </BoxCards>
+      <BoxCardDestaque>
+        {cardsDestaque.map((cardDestaque) => (<CardDestaque>{cardDestaque}</CardDestaque>))}
+      </BoxCardDestaque>
+    </BoxWrapper>
+  );
+};
 
 export default WrapperProjetos;

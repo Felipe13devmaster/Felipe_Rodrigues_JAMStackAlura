@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import Proptypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardTitle from '../CardTitle';
 import CardText from '../CardText';
@@ -45,18 +46,18 @@ const CardBody = styled.div`
   width: 307px;
 `;
 
-const CardDestaque = () => (
+const CardDestaque = ({ children }) => (
   <ContentCardDestaque>
-    <CardImage alt="imagem" src="https://mariaeunicesousa.com/wp-content/uploads/2019/03/ecli-partial-solar-eclipse_20180810_600x320.jpg" />
+    <CardImage alt="imagem" src={children.srcImage} />
     <CardBody>
-      <CardTitle />
-      <CardText />
+      <CardTitle>{children.title}</CardTitle>
+      <CardText>{children.text}</CardText>
     </CardBody>
   </ContentCardDestaque>
 );
 
-// CardDestaque.propTypes = {
-//   children: PropTypes.string.isRequired,
-// };
+CardDestaque.propTypes = {
+  children: Proptypes.node.isRequired,
+};
 
 export default CardDestaque;

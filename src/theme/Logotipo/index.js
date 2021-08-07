@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const LogotipoContent = styled.div`
 
 `;
 
-const Logotipo = () => {
-  return <LogotipoContent>Logotipo</LogotipoContent>
-};
+const Logotipo = () => <LogotipoContent>Logotipo</LogotipoContent>;
 
 export default Logotipo;
