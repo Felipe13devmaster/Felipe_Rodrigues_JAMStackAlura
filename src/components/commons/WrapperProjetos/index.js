@@ -69,10 +69,14 @@ const WrapperProjetos = () => {
   return (
     <BoxWrapper>
       <BoxCards>
-        {cards.map((card) => (<Card>{card}</Card>))}
+        {cards.map((card) => (<Card key={card.title}>{card}</Card>))}
       </BoxCards>
       <BoxCardDestaque>
-        {cardsDestaque.map((cardDestaque) => (<CardDestaque>{cardDestaque}</CardDestaque>))}
+        {cardsDestaque.map((cardDestaque) => (
+          <CardDestaque key={cardDestaque.title}>
+            {cardDestaque}
+          </CardDestaque>
+        ))}
       </BoxCardDestaque>
     </BoxWrapper>
   );

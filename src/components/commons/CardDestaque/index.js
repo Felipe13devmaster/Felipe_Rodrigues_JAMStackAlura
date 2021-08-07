@@ -57,7 +57,8 @@ const CardDestaque = ({ children }) => (
 );
 
 CardDestaque.propTypes = {
-  children: Proptypes.node.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  children: Proptypes.object.isRequired,
 };
 
 export default CardDestaque;
