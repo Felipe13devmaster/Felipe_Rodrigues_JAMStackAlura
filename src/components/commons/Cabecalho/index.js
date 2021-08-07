@@ -1,11 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import theme from '../../../theme';
 import Logotipo from '../../../theme/Logotipo';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import Nav from '../Nav';
 
 const WrapperCabecalho = styled.div`
-  background-color: blue;
+  background-color:  ${() => theme.colors.primary};
   display: flex;
   justify-content: space-around;
 
@@ -20,7 +21,7 @@ const WrapperCabecalho = styled.div`
 `;
 
 WrapperCabecalho.LeftSide = styled.div`
-  background-color: yellowgreen;
+  background-color: ${() => theme.colors.secondary};
   display: flex;
   justify-content: center;
   align-Items: center;
@@ -36,7 +37,7 @@ WrapperCabecalho.LeftSide = styled.div`
 `;
 
 WrapperCabecalho.RightSide = styled.div`
-  background-color: red;
+  background-color:  ${() => theme.colors.tertiary};
   width: 250px;
   display: flex;
   justify-content: center;

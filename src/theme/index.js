@@ -1,8 +1,10 @@
 const colors = {
-  primary: '#E9C46A',
-  secondary: '#FFF8E6',
-  tertiary: '#FFFFFF',
-  quaternary: '#000000',
+  primary: '#3866F2',
+  secondary: '#447EF2',
+  tertiary: '#4B72A6',
+  quaternary: '#F25C5C',
+  dark: '#262626',
+  white: '#FFFFFF',
 };
 
 const breakpoints = {

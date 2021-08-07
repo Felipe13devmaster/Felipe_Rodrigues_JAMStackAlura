@@ -2,9 +2,10 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import theme from '../../../theme';
 
 const Conteudo = styled.div`
-  background-color: pink;
+  background-color: ${() => theme.colors.dark};
   display: flex;
   flex-direction: column;
   justify-content: center;

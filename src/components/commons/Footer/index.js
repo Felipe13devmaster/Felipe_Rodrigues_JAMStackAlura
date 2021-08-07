@@ -2,9 +2,10 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropType from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import theme from '../../../theme';
 
 const FooterContent = styled.div`
-  background-color: pink;
+  background-color: ${() => theme.colors.primary};
   display: flex;
   justify-content: center;
   height: 68px;
@@ -20,7 +21,7 @@ const FooterContent = styled.div`
 `;
 
 const FooterIcon = styled.div`
-  background-color: red;
+  background-color: ${() => theme.colors.secondary};
   display: flex;
   align-Items: center;
   justify-content: center;

@@ -4,9 +4,10 @@ import Proptypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardTitle from '../CardTitle';
 import CardText from '../CardText';
+import theme from '../../../theme';
 
 const ContentCardDestaque = styled.div`
-  background-color: pink;
+  background-color: ${() => theme.colors.primary};
   display: flex;
   flex-direction: row;
   align-items: center;

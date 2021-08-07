@@ -3,9 +3,10 @@ import styled, { css } from 'styled-components';
 import Proptypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardTitle from '../CardTitle';
+import theme from '../../../theme';
 
 const ContentCard = styled.div`
-  background-color: pink;
+  background-color: ${() => theme.colors.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
