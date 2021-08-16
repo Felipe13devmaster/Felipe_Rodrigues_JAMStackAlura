@@ -45,22 +45,22 @@ const BoxCardDestaque = styled.div`
 const WrapperProjetos = () => {
   const cards = [
     {
-      srcImage: 'https://i.pinimg.com/originals/9a/ab/b3/9aabb35835e6230b502ad25532da8ff6.jpg',
+      srcImage: 'images/img1.jpg',
       title: 'Title 1',
     },
     {
-      srcImage: 'https://i0.wp.com/www.pkclsoft.com/wp/wp-content/uploads/2016/03/playereditor.jpg?resize=300%2C400',
+      srcImage: 'images/img1.jpg',
       title: 'Title 2',
     },
     {
-      srcImage: 'https://fdr-cover-images.imgix.net/2019/12/n0dOE8Hm-Free_Web_Dashboard_UI_Kit_Cr8tiv_Yemmy_021219_Thumbnail.jpg?auto=format&fit=crop&h=400&ixlib=php-3.3.0&w=600&wpsize=grid-image&s=25d534296095c3cb31edfbadfa8e2071',
+      srcImage: 'images/img1.jpg',
       title: 'Title 3',
     },
   ];
 
   const cardsDestaque = [
     {
-      srcImage: 'https://mariaeunicesousa.com/wp-content/uploads/2019/03/ecli-partial-solar-eclipse_20180810_600x320.jpg',
+      srcImage: 'images/img1.jpg',
       title: 'Title',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptates accusamus eum odio earum eligendi. Tempore ducimus quam voluptatem voluptates culpa impedit maiores? Incidunt nisi dicta quasi, quaerat temporibus facere!Tempore ducimus quam voluptatem odio earum eligendi ipsum dolor sit amet consectetur.',
     },
