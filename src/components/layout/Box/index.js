@@ -1,11 +1,22 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
-import PropType from 'prop-types';
 import theme from '../../../theme';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import convertPropsToStyle from '../../../theme/utils/convertPropsToStyle';
 
-const Content = styled.div`
-  background-color: ${() => theme.colors.dark};
+const Box = styled.div`
+  ${convertPropsToStyle('flex')}
+  ${convertPropsToStyle('display')}
+  ${convertPropsToStyle('flexDirection')}
+  ${convertPropsToStyle('justifyContent')}
+  ${convertPropsToStyle('flexWrap')}
+  ${convertPropsToStyle('backgroundImage')}
+  ${convertPropsToStyle('backgroundRepeat')}
+  ${convertPropsToStyle('backgroundPosition')}
+  ${convertPropsToStyle('backgroundColor')}
+  ${convertPropsToStyle('boxShadow')}
+  ${convertPropsToStyle('padding')}
+  ${convertPropsToStyle('height')}
+  ${convertPropsToStyle('margin')}
 
   ${breakpointsMedia({
     xs: css`
@@ -16,13 +27,5 @@ const Content = styled.div`
     `,
   })}
 `;
-
-const Box = ({ children }) => (
-  <Content>{children}</Content>
-);
-
-Box.propTypes = {
-  children: PropType.node.isRequired,
-};
 
 export default Box;
