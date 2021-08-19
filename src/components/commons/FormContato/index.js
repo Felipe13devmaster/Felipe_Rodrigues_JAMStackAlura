@@ -1,6 +1,8 @@
 import React from 'react';
+import TextAreaField from '../../foms/TextAreaField';
 import TextField from '../../foms/TextField';
 import Box from '../../layout/Box';
+import Grid from '../../layout/Grid';
 
 const FormContent = () => {
   const formStates = {
@@ -84,11 +86,12 @@ const FormContent = () => {
         />
       </div>
       <div>
-        <TextField
+        <TextAreaField
           placeholder="mensagem"
           name="mensagem"
           value={userInfo.mensagem}
           onChange={handleChange}
+          rows="5"
         />
       </div>
       <button
@@ -106,22 +109,34 @@ const FormContent = () => {
 
 // eslint-disable-next-line react/prop-types
 const FormContato = ({ propsDoModal }) => (
-  <Box
-    boxShadow="-10px 0px 24px rgba(7, 12, 14, 0.1)"
-    display="flex"
-    flexDirection="column"
-    justifyContent="center"
+  <Grid.Row
+    marginLeft={0}
+    marginRight={0}
     flex={1}
-    backgroundColor="white"
-    padding={{
-      xs: '16px',
-      md: '85px',
-    }}
-          // eslint-disable-next-line react/jsx-props-no-spreading
-    {...propsDoModal}
+    justifyContent="flex-end"
   >
-    <FormContent />
-  </Box>
+    <Grid.Col
+      display="flex"
+      paddingRight={{ md: '0' }}
+      flex={1}
+      value={{ xs: 12, md: 5, lg: 4 }}
+    >
+      <Box
+        height="100%"
+        boxShadow="-10px 0px 24px rgba(7, 12, 14, 0.1)"
+        flex={1}
+        padding={{
+          xs: '16px',
+          md: '85px',
+        }}
+        backgroundColor="white"
+          // eslint-disable-next-line react/jsx-props-no-spreading
+        {...propsDoModal}
+      >
+        <FormContent />
+      </Box>
+    </Grid.Col>
+  </Grid.Row>
 );
 
 export default FormContato;
