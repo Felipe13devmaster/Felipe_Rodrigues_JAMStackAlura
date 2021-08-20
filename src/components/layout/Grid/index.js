@@ -12,24 +12,15 @@ const Grid = {
         max-width: initial;
         ${breakpointsMedia({
     xs: css`
-            max-width: initial;
-            padding-right: 28px;
-            padding-left: 28px;
-            `,
-    sm: css`
-            max-width: 576px; 
-            `,
+          max-width: initial;
+          padding-right: 28px;
+          padding-left: 28px;
+          `,
     md: css`
-            max-width: 768px;
-            padding-right: 16px;
-            padding-left: 16px; 
-            `,
-    lg: css`
-            max-width: 1160px; 
-            `,
-    xl: css`
-            max-width: 1222px;
-            `,
+          max-width: 768px;
+          padding-right: 16px;
+          padding-left: 16px; 
+          `,
   })}
 
         ${convertPropsToStyle('marginTop')}
@@ -39,17 +30,45 @@ const Grid = {
         flex-wrap: wrap;
         margin-right: -16px;
         margin-left: -16px;
+        ${({ value }) => {
+    if (typeof value === 'number') {
+      return css`
+         height: ${value}%;
+       `;
+    }
+
+    return breakpointsMedia({
+      xs: value?.xs
+        ? css`
+            height: ${value.xs}%;
+          `
+        : '',
+      md: value?.md
+        ? css`
+            height: ${value.md}%;
+          `
+        : '',
+    });
+  }}
         ${convertPropsToStyle('flex')}
         ${convertPropsToStyle('marginLeft')}
         ${convertPropsToStyle('marginRight')}
         ${convertPropsToStyle('justifyContent')}
       `,
   Col: styled.div`
-        padding-right: 16px;
-        padding-left: 16px;
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
+        ${breakpointsMedia({
+    xs: css`
+      padding-right: 0;
+      padding-left: 0;
+    `,
+    md: css`
+      padding-right: 16px;
+      padding-left: 16px;
+    `,
+  })}
         ${({ value }) => {
     if (typeof value === 'number') {
       return css`

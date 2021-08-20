@@ -1,18 +1,26 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const InputWrapper = styled.div`
   margin-bottom: 17px;
 `;
 
 const TextArea = styled.textarea`
-  width: 100%;
   border: 1px solid black;
   padding: 12px 16px;
   outline: 0;
   max-width: 100%;
   max-height: 520px;
+  ${breakpointsMedia({
+    xs: css`
+      width: 90%
+    `,
+    md: css`
+      width: 100%
+    `,
+  })}
 `;
 
 const TextAreaField = ({

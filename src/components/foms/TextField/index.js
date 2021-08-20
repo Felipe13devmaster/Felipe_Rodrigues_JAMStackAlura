@@ -1,17 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const InputWrapper = styled.div`
   margin-bottom: 17px;
 `;
 
 const Input = styled.input`
-  width: 100%;
   border: 1px solid black;
   padding: 12px 16px;
   outline: 0;
-  
+  ${breakpointsMedia({
+    xs: css`
+      width: 90%
+    `,
+    md: css`
+      width: 100%
+    `,
+  })}
 `;
 
 const TextField = ({

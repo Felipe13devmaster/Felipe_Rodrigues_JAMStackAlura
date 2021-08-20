@@ -3,6 +3,8 @@ import TextAreaField from '../../foms/TextAreaField';
 import TextField from '../../foms/TextField';
 import Box from '../../layout/Box';
 import Grid from '../../layout/Grid';
+import Button from '../Button';
+import ButtonGroup from '../ButtonGroup';
 
 const FormContent = () => {
   const formStates = {
@@ -94,12 +96,14 @@ const FormContent = () => {
           rows="5"
         />
       </div>
-      <button
-        type="submit"
-        disabled={isFormInvalid}
-      >
-        Cadastrar
-      </button>
+      <ButtonGroup>
+        <Button
+          type="submit"
+          disabled={isFormInvalid}
+        >
+          Cadastrar
+        </Button>
+      </ButtonGroup>
       {isFormSubmited && submissionStatus === formStates.DONE && (
         <p>alguma coisa</p>
       )}
@@ -114,12 +118,13 @@ const FormContato = ({ propsDoModal }) => (
     marginRight={0}
     flex={1}
     justifyContent="flex-end"
+    value={{ xs: 50, md: 100 }}
   >
     <Grid.Col
       display="flex"
       paddingRight={{ md: '0' }}
       flex={1}
-      value={{ xs: 12, md: 5, lg: 4 }}
+      value={{ xs: 12, md: 5 }}
     >
       <Box
         height="100%"
