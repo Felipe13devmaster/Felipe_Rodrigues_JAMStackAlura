@@ -11,7 +11,7 @@ const TextArea = styled.textarea`
   border: 1px solid black;
   padding: 12px 16px;
   outline: 0;
-  max-width: 330px;
+  max-width: 100%;
   max-height: 520px;
 `;
 
