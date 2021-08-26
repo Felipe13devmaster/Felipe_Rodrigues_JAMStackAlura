@@ -14,22 +14,25 @@ const ContentCardDestaque = styled.div`
   padding: 1px;
   border-radius: 3px;
 
-  &:hover {
-    background-color: ${() => theme.colors.tertiary};
-    transition: 300ms;
-    transform: scale(1.05);
-  }
-  
   ${breakpointsMedia({
     xs: css`
       width: 290px;
       height: 249px;
       flex-direction: column;
+      &:hover {
+        background-color: ${() => theme.colors.tertiary};
+        transition: 300ms;
+      }
     `,
     md: css`
       width: 900px;
       height: 320px;
       flex-direction: row;
+      &:hover {
+        background-color: ${() => theme.colors.tertiary};
+        transition: 300ms;
+        transform: scale(1.05);
+      }
     `,
   })}
 `;

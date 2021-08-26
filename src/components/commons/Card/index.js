@@ -13,22 +13,25 @@ const ContentCard = styled.div`
   padding: 1px;
   border-radius: 3px;
 
-  &:hover {
-    background-color: ${() => theme.colors.tertiary};
-    transition: 300ms;
-    transform: scale(1.05);
-  }
-  
   ${breakpointsMedia({
     xs: css`
       width: 290px;
       height: 249px;
       margin: 16px;
+      &:hover {
+        background-color: ${() => theme.colors.tertiary};
+        transition: 300ms;
+      }
     `,
     md: css`
       width: 288px;
       height: 510px;
       margin: 9px;
+      &:hover {
+        background-color: ${() => theme.colors.tertiary};
+        transition: 300ms;
+        transform: scale(1.05);
+      }
     `,
   })}
 `;
@@ -48,16 +51,22 @@ const CardImage = styled.img`
   })}
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const Card = ({ children }) => (
-  <ContentCard>
-    <CardImage src={children.srcImage} />
-    <CardTitle>{children.title}</CardTitle>
-  </ContentCard>
+  <Link href={children.link}>
+    <ContentCard>
+      <CardImage src={children.srcImage} />
+      <CardTitle>{children.title}</CardTitle>
+    </ContentCard>
+  </Link>
 );
 
 Card.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  children: Proptypes.object.isRequired,
+  children: Proptypes.node.isRequired,
 };
 
 export default Card;
