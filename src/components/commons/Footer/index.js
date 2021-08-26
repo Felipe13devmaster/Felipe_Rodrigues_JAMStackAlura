@@ -46,7 +46,7 @@ const Footer = () => {
     },
     {
       srcImage: '/images/linkedin-round-logo.png',
-      url: '/',
+      url: 'https://www.linkedin.com/in/felipe-r-4a80868b/',
     },
   ];
 
