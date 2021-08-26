@@ -4,6 +4,7 @@ import Proptypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardTitle from '../CardTitle';
 import theme from '../../../theme';
+import Link from '../Link';
 
 const ContentCard = styled.div`
   background-color: ${() => theme.colors.primary};
@@ -51,13 +52,8 @@ const CardImage = styled.img`
   })}
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: inherit;
-`;
-
 const Card = ({ children }) => (
-  <Link href={children.link}>
+  <Link href={children.url}>
     <ContentCard>
       <CardImage src={children.srcImage} />
       <CardTitle>{children.title}</CardTitle>

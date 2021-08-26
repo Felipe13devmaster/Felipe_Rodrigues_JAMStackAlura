@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import theme from '../../../theme';
+import Link from '../Link';
 
 const FooterContent = styled.div`
   background-color: ${() => theme.colors.primary};
@@ -41,7 +42,7 @@ const Footer = () => {
     },
     {
       srcImage: '/images/github-round-logo.png',
-      url: '/',
+      url: 'https://github.com/Felipe13devmaster',
     },
     {
       srcImage: '/images/linkedin-round-logo.png',
@@ -53,7 +54,9 @@ const Footer = () => {
     <FooterContent>
       {icons.map((icon) => (
         <FooterIcon key={icon.srcImage}>
-          <Icon src={icon.srcImage} alt="icone" />
+          <Link href={icon.url}>
+            <Icon src={icon.srcImage} alt="icone" />
+          </Link>
         </FooterIcon>
       ))}
     </FooterContent>

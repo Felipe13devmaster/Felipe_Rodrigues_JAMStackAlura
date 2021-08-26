@@ -46,18 +46,18 @@ const WrapperProjetos = () => {
   const cards = [
     {
       srcImage: 'images/win-form-bank.png',
-      title: 'Title 1',
-      link: 'https://github.com/Felipe13devmaster/Windows-Forms-Bank',
+      title: 'Fubank',
+      url: 'https://github.com/Felipe13devmaster/Windows-Forms-Bank',
     },
     {
       srcImage: 'images/img1.jpg',
       title: 'Title 2',
-      link: '',
+      url: '',
     },
     {
       srcImage: 'images/img1.jpg',
       title: 'Title 3',
-      link: '',
+      url: '',
     },
   ];
 
