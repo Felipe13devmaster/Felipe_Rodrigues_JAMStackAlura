@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 import Proptypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardTitle from '../CardTitle';
-import CardText from '../CardText';
 import theme from '../../../theme';
 
 const ContentCardDestaque = styled.div`
@@ -57,6 +56,28 @@ const CardBody = styled.div`
   flex-direction: column;
   text-align: center;
   width: 307px;
+`;
+
+const CardText = styled.p`
+  background-color: ${() => theme.colors.white};
+  height: fit-content;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 0px;
+  text-align: justify;
+  word-break: break-word;
+  text-indent: 2em;
+  border-radius: 3px;
+  padding: 5px;
+
+  ${breakpointsMedia({
+    xs: css`
+      display: none;
+    `,
+    md: css`
+      display: block;
+    `,
+  })}
 `;
 
 const CardDestaque = ({ children }) => (

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import theme from '../../../theme';
 
@@ -38,17 +37,13 @@ const Subtitulo = styled.h3`
   line-height:  57.6px;
 `;
 
-const Capa = ({ children }) => (
+const Capa = () => (
   <Conteudo>
     <Titulo>
-      {children}
+      FELIPE RODRIGUES
     </Titulo>
     <Subtitulo>Portfolio</Subtitulo>
   </Conteudo>
 );
-
-Capa.propTypes = {
-  children: PropTypes.string.isRequired,
-};
 
 export default Capa;

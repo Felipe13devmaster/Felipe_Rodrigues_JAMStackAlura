@@ -11,7 +11,7 @@ import WrapperProjetos from '../src/components/commons/WrapperProjetos';
 import Box from '../src/components/layout/Box';
 import theme from '../src/theme';
 
-export default function Home() {
+const Home = () => {
   const [isModalOpen, setModalState] = React.useState(false);
 
   return (
@@ -26,9 +26,7 @@ export default function Home() {
           <FormContato propsDoModal={propsDoModal} />
         )}
       </Modal>
-      <Capa>
-        FELIPE RODRIGUES
-      </Capa>
+      <Capa />
       <Cabecalho />
       <SectionTitle>Meus Projetos</SectionTitle>
       <WrapperProjetos />
@@ -44,4 +42,6 @@ export default function Home() {
       <Footer />
     </Box>
   );
-}
+};
+
+export default Home;
