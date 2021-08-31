@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import Link from '../Link';
 
 const Menu = styled.nav`
   display: flex;
@@ -20,16 +21,11 @@ const Menu = styled.nav`
   })}
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: black;
-`;
-
 const Nav = () => {
   const links = [
     {
       texto: 'Sobre Mim',
-      url: '/',
+      url: '/sobreMim',
     },
     {
       texto: 'Contato',

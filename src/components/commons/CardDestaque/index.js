@@ -4,6 +4,7 @@ import Proptypes from 'prop-types';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import CardTitle from '../CardTitle';
 import theme from '../../../theme';
+import Link from '../Link';
 
 const ContentCardDestaque = styled.div`
   background-color: ${() => theme.colors.primary};
@@ -81,13 +82,15 @@ const CardText = styled.p`
 `;
 
 const CardDestaque = ({ children }) => (
-  <ContentCardDestaque>
-    <CardImage alt="imagem" src={children.srcImage} />
-    <CardBody>
-      <CardTitle>{children.title}</CardTitle>
-      <CardText>{children.text}</CardText>
-    </CardBody>
-  </ContentCardDestaque>
+  <Link href={children.url}>
+    <ContentCardDestaque>
+      <CardImage alt="imagem" src={children.srcImage} />
+      <CardBody>
+        <CardTitle>{children.title}</CardTitle>
+        <CardText>{children.text}</CardText>
+      </CardBody>
+    </ContentCardDestaque>
+  </Link>
 );
 
 CardDestaque.propTypes = {
