@@ -45,8 +45,8 @@ const BoxCardDestaque = styled.div`
 const WrapperProjetos = () => {
   const cards = [
     {
-      srcImage: 'images/win-form-bank.png',
-      title: 'Fubank',
+      srcImage: 'images/img1.jpg',
+      title: 'Title 2',
       url: '/projeto',
     },
     {
@@ -63,8 +63,8 @@ const WrapperProjetos = () => {
 
   const cardsDestaque = [
     {
-      srcImage: 'images/img1.jpg',
-      title: 'Title',
+      srcImage: 'images/win-form-bank.png',
+      title: 'Fubank',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptates accusamus eum odio earum eligendi. Tempore ducimus quam voluptatem voluptates culpa impedit maiores? Incidunt nisi dicta quasi, quaerat temporibus facere!Tempore ducimus quam voluptatem odio earum eligendi ipsum dolor sit amet consectetur.',
       url: '/projeto',
     },
