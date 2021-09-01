@@ -13,6 +13,7 @@ const ContentCardDestaque = styled.div`
   align-items: center;
   padding: 1px;
   border-radius: 3px;
+  cursor: pointer;
 
   ${breakpointsMedia({
     xs: css`

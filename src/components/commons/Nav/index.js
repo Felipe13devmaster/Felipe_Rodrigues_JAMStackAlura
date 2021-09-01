@@ -8,6 +8,7 @@ const Menu = styled.nav`
   list-style: none;
   justify-content: space-between;
   width: 100%;
+  cursor: pointer;
 
   ${breakpointsMedia({
     xs: css`

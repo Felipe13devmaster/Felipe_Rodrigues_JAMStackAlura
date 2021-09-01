@@ -4,6 +4,7 @@ import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const Button = styled.button`
   background-color: ${() => theme.colors.primary};
+  cursor: pointer;
   
   ${breakpointsMedia({
     xs: css`
