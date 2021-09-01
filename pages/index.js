@@ -1,47 +1,30 @@
 import React from 'react';
 import Button from '../src/components/commons/Button';
 import ButtonGroup from '../src/components/commons/ButtonGroup';
-import Cabecalho from '../src/components/commons/Cabecalho';
-import Capa from '../src/components/commons/Capa';
-import Footer from '../src/components/commons/Footer';
-import FormContato from '../src/components/commons/FormContato';
-import Modal from '../src/components/commons/Modal';
 import SectionTitle from '../src/components/commons/SectionTitle';
 import WrapperProjetos from '../src/components/commons/WrapperProjetos';
 import Box from '../src/components/layout/Box';
-import theme from '../src/theme';
+import { WebsitePageContext } from '../src/components/wrappers';
+import webSitePageHOC from '../src/components/wrappers/WebSitePage/hoc';
 
-const Home = () => {
-  const [isModalOpen, setModalState] = React.useState(false);
+const HomeScreen = () => {
+  const websitePageContext = React.useContext(WebsitePageContext);
 
   return (
-    <Box
-      backgroundColor={theme.colors.dark}
-    >
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalState(false)}
-      >
-        {(propsDoModal) => (
-          <FormContato propsDoModal={propsDoModal} />
-        )}
-      </Modal>
-      <Capa />
-      <Cabecalho />
+    <Box>
       <SectionTitle>Meus Projetos</SectionTitle>
       <WrapperProjetos />
       <ButtonGroup>
         <Button
           onClick={() => {
-            setModalState(!isModalOpen);
+            websitePageContext.toggleModalCadastro();
           }}
         >
           Entre em contato
         </Button>
       </ButtonGroup>
-      <Footer />
     </Box>
   );
 };
 
-export default Home;
+export default webSitePageHOC(HomeScreen);
