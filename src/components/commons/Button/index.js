@@ -8,10 +8,14 @@ const Button = styled.button`
   
   ${breakpointsMedia({
     xs: css`
-      padding: 12px 26px
+      padding: 12px 26px;
     `,
     md: css`
-      padding: 15px 32px
+      padding: 15px 32px;
+      &:hover {
+        background-color: ${() => theme.colors.tertiary};
+        transition: 300ms;
+      }
     `,
   })}
 `;

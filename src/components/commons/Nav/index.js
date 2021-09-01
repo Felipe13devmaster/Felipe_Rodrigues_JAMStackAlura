@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import theme from '../../../theme';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import Link from '../Link';
 
@@ -18,6 +19,11 @@ const Menu = styled.nav`
     md: css`
       font-size: 28px;
       line-height: 34px;
+      li:hover {
+        background-color: ${() => theme.colors.tertiary};
+        transition: 300ms;
+        transform: scale(1.05);
+      }
     `,
   })}
 `;
