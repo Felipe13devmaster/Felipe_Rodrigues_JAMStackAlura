@@ -46,7 +46,7 @@ const WrapperProjetos = () => {
   const cards = [
     {
       srcImage: 'images/img1.jpg',
-      title: 'Title 2',
+      title: 'Title 1',
       url: '/projeto',
     },
     {

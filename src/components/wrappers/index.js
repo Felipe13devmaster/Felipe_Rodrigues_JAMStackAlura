@@ -13,7 +13,7 @@ export const WebsitePageContext = React.createContext({
   toggleModalCadastro: () => {},
 });
 
-const WebsitePageWrapper = ({ children }) => {
+const WebsitePageWrapper = ({ children, capaProps }) => {
   const [isModalOpen, setModalState] = React.useState(false);
 
   return (
@@ -35,13 +35,22 @@ const WebsitePageWrapper = ({ children }) => {
             <FormContato propsDoModal={propsDoModal} />
           )}
         </Modal>
-        <Capa />
+        {capaProps.display && (<Capa />)}
+        {/* {console.log(capaProps.display)} */}
         <Cabecalho />
         {children}
         <Footer />
       </Box>
     </WebsitePageContext.Provider>
   );
+};
+
+WebsitePageWrapper.defaultProps = {
+  seoProps: {},
+  pageBoxProps: {},
+  capaProps: {
+    display: true,
+  },
 };
 
 export default WebsitePageWrapper;
