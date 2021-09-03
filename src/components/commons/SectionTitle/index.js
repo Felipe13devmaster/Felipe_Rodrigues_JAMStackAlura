@@ -7,7 +7,6 @@ const Titulo = styled.h2`
   text-align: center;
   text-transform: uppercase;
   font-weight: normal;
-  color: white;
 
   ${breakpointsMedia({
     xs: css`
