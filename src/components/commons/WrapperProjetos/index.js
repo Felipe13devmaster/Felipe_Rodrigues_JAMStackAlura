@@ -47,17 +47,17 @@ const WrapperProjetos = () => {
     {
       srcImage: 'images/img1.jpg',
       title: 'Title 1',
-      url: '/projeto',
+      url: 'https://github.com/Felipe13devmaster/Windows-Forms-Bank',
     },
     {
       srcImage: 'images/img1.jpg',
       title: 'Title 2',
-      url: '/projeto',
+      url: 'https://github.com/Felipe13devmaster/Windows-Forms-Bank',
     },
     {
       srcImage: 'images/img1.jpg',
       title: 'Title 3',
-      url: '/projeto',
+      url: 'https://github.com/Felipe13devmaster/Windows-Forms-Bank',
     },
   ];
 
@@ -66,7 +66,7 @@ const WrapperProjetos = () => {
       srcImage: 'images/win-form-bank.png',
       title: 'Fubank',
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptates accusamus eum odio earum eligendi. Tempore ducimus quam voluptatem voluptates culpa impedit maiores? Incidunt nisi dicta quasi, quaerat temporibus facere!Tempore ducimus quam voluptatem odio earum eligendi ipsum dolor sit amet consectetur.',
-      url: '/projeto',
+      url: 'https://github.com/Felipe13devmaster/Windows-Forms-Bank',
     },
   ];
 
