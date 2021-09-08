@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import theme from '../../../theme';
+import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 import SectionTitle from '../../commons/SectionTitle';
 import Box from '../../layout/Box';
 
@@ -15,14 +17,38 @@ const BoxSobreMim = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: ${theme.colors.primary};
+  padding: 12px;
+  
+
+  ${breakpointsMedia({
+    xs: css`
+      
+    `,
+    md: css`
+      border-radius: 30px;
+    `,
+  })}
 `;
 
-const Imagem = styled.img``;
+const Imagem = styled.img`
+  margin-bottom: 18px;
+  border-radius: 50%;
+`;
 
 const Texto = styled.p`
   max-width: 500px;
   text-align: justify;
   text-indent: 2em;
+  
+`;
+
+const Subtitulo = styled.h3`
+  margin-bottom: 0;
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  line-height:  57.6px;
 `;
 
 const BoxMeusRepositorios = styled.div`
@@ -42,7 +68,7 @@ const SobreMimScreen = ({ repositorios }) => (
     <Box>
       <SectionTitle>SOBRE MIM</SectionTitle>
       <BoxSobreMim>
-        <Imagem alt="imagem" />
+        <Imagem src="../../../images/foto.jpg" alt="imagem" />
         <Texto>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Dolores voluptates accusamus eum odio earum eligendi. Tempore
@@ -55,7 +81,7 @@ const SobreMimScreen = ({ repositorios }) => (
       <BoxMeusRepositorios>
         {repositorios.map((repositorio) => (
           <Item key={repositorio.id}>
-            <Texto>{repositorio.name}</Texto>
+            <Subtitulo>{repositorio.name}</Subtitulo>
             <LinkExterno href={repositorio.svn_url}>{repositorio.url}</LinkExterno>
           </Item>
         ))}

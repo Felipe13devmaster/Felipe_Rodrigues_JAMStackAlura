@@ -25,7 +25,7 @@ const WebsitePageWrapper = ({ children, capaProps }) => {
       }}
     >
       <Box
-        backgroundColor={theme.colors.white}
+        backgroundColor={theme.colors.dark}
       >
         <Modal
           isOpen={isModalOpen}
@@ -36,7 +36,6 @@ const WebsitePageWrapper = ({ children, capaProps }) => {
           )}
         </Modal>
         {capaProps.display && (<Capa />)}
-        {/* {console.log(capaProps.display)} */}
         <Cabecalho />
         {children}
         <Footer />
