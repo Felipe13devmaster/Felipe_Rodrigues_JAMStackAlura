@@ -58,6 +58,13 @@ const BoxMeusRepositorios = styled.div`
 
 const Item = styled.li`
   list-style-type: none;
+  ${breakpointsMedia({
+    xs: css`
+      margin: 0 12px;
+    `,
+    md: css`
+    `,
+  })}
 `;
 
 const LinkExterno = styled.a`
