@@ -89,7 +89,7 @@ const SobreMimScreen = ({ repositorios }) => (
         {repositorios.map((repositorio) => (
           <Item key={repositorio.id}>
             <Subtitulo>{repositorio.name}</Subtitulo>
-            <LinkExterno href={repositorio.svn_url}>{repositorio.url}</LinkExterno>
+            <LinkExterno href={repositorio.svn_url}>{repositorio.svn_url}</LinkExterno>
           </Item>
         ))}
       </BoxMeusRepositorios>
