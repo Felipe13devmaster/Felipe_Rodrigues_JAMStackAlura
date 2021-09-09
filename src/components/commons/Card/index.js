@@ -60,7 +60,7 @@ const LinkExterno = styled.a`
 const Card = ({ children }) => (
   <LinkExterno href={children.url}>
     <ContentCard>
-      <CardImage src={children.srcImage} />
+      <CardImage src={children.srcImage} alt="Imagem do card" />
       <CardTitle>{children.title}</CardTitle>
     </ContentCard>
   </LinkExterno>
