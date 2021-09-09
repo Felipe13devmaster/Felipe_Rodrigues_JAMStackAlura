@@ -4,21 +4,32 @@ import theme from '../../../theme';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
 const WrapperPagina = styled.div`
-  height: 79vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 const BoxPagina404 = styled.div`
-  width: 415px;
-  height: 254px;
+  display: flex;
+  flex-direction: column;
   background-color: ${theme.colors.primary};
   border-radius: 4px;
+  padding: 0 20px 0 20px;
+
+  ${breakpointsMedia({
+    xs: css`
+      margin: 0 20px 0 20px;
+    `,
+    md: css`
+      margin: 0;
+    `,
+  })}
 `;
 
 const Titulo = styled.h1`
   color: white;
+  margin-top: 20px;
   margin-bottom: 0;
   font-weight: 400;
   text-align: center;
@@ -40,7 +51,6 @@ const Subtitulo = styled.h3`
   font-size: 36px;
   font-weight: 400;
   line-height:  43.2px;
-  margin-bottom: 0;
 `;
 
 const Pagina404Screen = () => (
