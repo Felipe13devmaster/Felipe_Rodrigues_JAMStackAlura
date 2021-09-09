@@ -27,4 +27,10 @@ const HomeScreen = () => {
   );
 };
 
-export default webSitePageHOC(HomeScreen);
+export default webSitePageHOC(HomeScreen, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Home',
+    },
+  },
+});

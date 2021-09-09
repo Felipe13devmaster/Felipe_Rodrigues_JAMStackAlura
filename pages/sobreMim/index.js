@@ -22,5 +22,8 @@ export default websitePageHOC(SobreMimPage, {
     capaProps: {
       display: false,
     },
+    seoProps: {
+      headTitle: 'Sobre Mim',
+    },
   },
 });

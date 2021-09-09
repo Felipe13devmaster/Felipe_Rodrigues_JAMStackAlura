@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/prop-types */
 import React from 'react';
 // import PropTypes from 'prop-types';
@@ -8,12 +9,13 @@ import Capa from '../commons/Capa';
 import Cabecalho from '../commons/Cabecalho';
 import Footer from '../commons/Footer';
 import theme from '../../theme';
+import SEO from '../commons/SEO';
 
 export const WebsitePageContext = React.createContext({
   toggleModalCadastro: () => {},
 });
 
-const WebsitePageWrapper = ({ children, capaProps }) => {
+const WebsitePageWrapper = ({ children, capaProps, seoProps }) => {
   const [isModalOpen, setModalState] = React.useState(false);
 
   return (
@@ -24,6 +26,8 @@ const WebsitePageWrapper = ({ children, capaProps }) => {
         },
       }}
     >
+      <SEO {...seoProps} />
+
       <Box
         backgroundColor={theme.colors.dark}
       >
