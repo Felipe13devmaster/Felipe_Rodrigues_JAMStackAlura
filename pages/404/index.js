@@ -1,9 +1,17 @@
 import React from 'react';
+import Pagina404Screen from '../../src/components/screens/Pagina404Screen';
+import webSitePageHOC from '../../src/components/wrappers/WebSitePage/hoc';
 
-export default function Page404() {
+function Page404() {
   return (
-    <div>
-      Página 404
-    </div>
+    <Pagina404Screen />
   );
 }
+
+export default webSitePageHOC(Page404, {
+  pageWrapperProps: {
+    capaProps: {
+      display: false,
+    },
+  },
+});
