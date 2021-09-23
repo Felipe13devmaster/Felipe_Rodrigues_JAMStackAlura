@@ -34,6 +34,7 @@ const FormContent = () => {
 
   return (
     <form
+      id="formContato"
       onSubmit={(event) => {
         event.preventDefault();
         setFormSubmited(true);
@@ -42,8 +43,9 @@ const FormContent = () => {
           email: userInfo.email,
           mensagem: userInfo.mensagem,
         };
-        fetch('https://instalura-api.vercel.app/api/users',
+        fetch('https://felipe-rodrigues-jam-stack-alura.vercel.app/api/postarMensagem',
           {
+            mode: 'no-cors',
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

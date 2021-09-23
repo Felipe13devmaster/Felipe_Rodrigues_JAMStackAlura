@@ -16,6 +16,7 @@ const HomeScreen = () => {
       <WrapperProjetos />
       <ButtonGroup>
         <Button
+          id="entreEmContato"
           onClick={() => {
             websitePageContext.toggleModalCadastro();
           }}
